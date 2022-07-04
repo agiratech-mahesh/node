@@ -1,15 +1,14 @@
-pipeline{
-    agent any {
-        stages{
-            stage('Verify') {
+pipeline {
+    agent any 
+    stages {
+        stage('Verify') {
             steps {
                 sh '''
                     docker version
                     docker-compose version
                 '''
             }
-            
-            }
+        }
             stage('build') {
                 steps {
                     sh ' npm install'
@@ -17,4 +16,4 @@ pipeline{
             }
         }
     }
-}
+
