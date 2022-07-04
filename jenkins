@@ -9,7 +9,7 @@ pipeline {
                 '''
             }
         }
-            stage('build') {
+            stage('npm') {
                 steps {
                     sh ' npm install'
                 }
@@ -20,6 +20,11 @@ pipeline {
                 }
 
             }
+            stage('build') {
+                steps {
+                    sh ' docker-compose build '
+                 }
+              }   
         }
     }
 
