@@ -4,9 +4,9 @@ pipeline {
   stage(verify) {
   steps {
          sh''
-         docker version
-         docker-compose version   '' }
+         docker version''
          }
      }
     }
 }         
+}
