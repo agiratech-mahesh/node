@@ -1,12 +1,12 @@
 pipeline {
-   agent any {
-   stages {
-    stage(verify) {
-    steps {
-         sh'''
+  agent any {
+  stages {
+  stage(verify) {
+  steps {
+         sh''
          docker version
          docker-compose version
-         '''
+         ''
          }
          }
          }
