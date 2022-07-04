@@ -23,9 +23,11 @@ pipeline {
                 steps {
                     sh 'docker-compose up -d '
                 }
-
             }
-  
+            stage('pushing to dockerhub') {
+               steps {
+                 sh ' 
+              
         }
     }
 
