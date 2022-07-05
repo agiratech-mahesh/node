@@ -28,7 +28,7 @@ pipeline {
                steps {
                  sh ' docker login -u maheshagiratech -p 624374@Ma https://index.docker.io/v1/ '
                  sh ' docker tag node_node maheshagiratech/nodejs'
-                 sh ' sudo docker push maheshagiratech/nodejs:latest '
+                 sh ' docker push maheshagiratech/nodejs:latest '
                  }
               }
         }
