@@ -26,6 +26,7 @@ pipeline {
             }
             stage('pushing to dockerhub') {
                steps {
+                 sh ' withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) '
                  sh ' docker tag node_node maheshagiratech/nodejs'
                  sh ' sudo docker push maheshagiratech/nodejs:latest '
                  }
