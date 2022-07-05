@@ -14,16 +14,16 @@ pipeline {
                     sh ' npm install'
                 }
             }
+            stage('docker compose') {
+                steps {
+                    sh 'docker-compose up -d '
+                }
+            }
              stage('build') {
                 steps {
                     sh ' docker-compose build '
                  }
-              } 
-             stage('docker compose') {
-                steps {
-                    sh 'docker-compose up -d -y '
-                }
-            }
+              }  
         }
     }
 
