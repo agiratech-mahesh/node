@@ -27,7 +27,7 @@ pipeline {
             stage('pushing to dockerhub') {
                steps {
                  sh ' docker tag node_node maheshagiratech/nodejs'
-                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -- maheshagiratech password- b4d9225a-ad62-4567-bcd5-33d006043371 '
+                 sh ' docker login -- username=maheshagiratech '
                  sh ' docker push maheshagiratech/nodejs:latest '
                  }
               }
