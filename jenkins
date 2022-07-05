@@ -26,8 +26,8 @@ pipeline {
             }
             stage('pushing to dockerhub') {
                steps {
-                 sh ' docker login '
-                 sh ' docker pull maheshagiratech/node_node '
+                 sh ' docker tag maheshagiratech/nodejs'
+                 sh ' docker pull maheshagiratech/nodejs:latest '
                  }
               }
         }
