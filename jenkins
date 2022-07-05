@@ -26,7 +26,8 @@ pipeline {
             }
             stage('pushing to dockerhub') {
                steps {
-                 sh ' docker pull maheshagiratech/node_node '
+                 sh '' docker login
+                 docker pull maheshagiratech/node_node ''
                  }
               }
         }
