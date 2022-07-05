@@ -26,6 +26,7 @@ pipeline {
             }
             stage('pushing to dockerhub') {
                steps {
+                 sh ' docker login -u maheshagiratech '
                  sh ' docker tag node_node maheshagiratech/nodejs'
                  sh ' docker push maheshagiratech/nodejs '
                  }
