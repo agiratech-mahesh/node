@@ -14,12 +14,7 @@ pipeline {
                     sh ' npm install'
                 }
             }
-            stage('docker install') {
-               steps {
-                     sh ' apt install docker.io '
-                     sh ' apt install docker-compose '
-                     }
-                   }
+            
             stage('docker compose') {
                 steps {
                     sh 'docker-compose up -d '
